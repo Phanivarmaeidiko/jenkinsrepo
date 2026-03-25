@@ -19,6 +19,6 @@ CREATE COMPUTE MODULE jenkins_app_MF_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot.JSON.Data.Res = InputRoot.XMLNSC;
+		SET OutputRoot.JSON.Data.Result = InputRoot.XMLNSC;
 	END;
 END MODULE;
