@@ -4,10 +4,10 @@ CREATE FILTER MODULE filter2msg_Filter
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 			IF(Root.JSON.Data.Customer.paymentType = 'netbanking') THEN				
-				RETURN TRUE ;
+				RETURN FALSE ;
 				--propagate TO TERMINAL 'FALSE';
 			ELSEIF(Root.JSON.Data.Customer.paymentType = 'CARD') THEN
-				RETURN FALSE;
+				RETURN TRUE;
 			ELSE
 				RETURN UNKNOWN ;
 			END IF ;			
